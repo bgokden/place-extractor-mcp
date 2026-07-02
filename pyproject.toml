@@ -14,7 +14,9 @@ classifiers = [
 ]
 dependencies = [
     "mcp>=1.2.0",
-    "transformers>=4.40",
+    # 4.45+ changed tokenizer special-token handling in a way that breaks this
+    # model's DeBERTa-v2 tokenizer config; pin to a verified-compatible range.
+    "transformers>=4.40,<4.45",
     "optimum[onnxruntime]>=1.20",
     "tokenizers>=0.15",
 ]
