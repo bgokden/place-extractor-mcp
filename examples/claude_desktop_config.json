@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "place-extractor": {
+      "command": "uvx",
+      "args": ["place-extractor-mcp"]
+    }
+  }
+}

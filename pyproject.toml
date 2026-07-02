@@ -1,0 +1,42 @@
+[project]
+name = "place-extractor-mcp"
+version = "0.1.0"
+description = "MCP server for multilingual place/location extraction, backed by mDeBERTa models."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Berk Gökden", email = "berk@primaxiom.ai" }]
+keywords = ["mcp", "model-context-protocol", "ner", "place-extraction", "geoparsing", "mdeberta", "onnx", "llm", "agents"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "mcp>=1.2.0",
+    "transformers>=4.40",
+    "optimum[onnxruntime]>=1.20",
+    "tokenizers>=0.15",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.urls]
+Homepage = "https://github.com/bgokden/place-extractor-mcp"
+Models = "https://huggingface.co/Berk"
+Author = "https://berkgokden.com"
+
+[project.scripts]
+place-extractor-mcp = "place_extractor_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/place_extractor_mcp"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
