@@ -1,5 +1,10 @@
 # place-extractor-mcp
 
+[![CI](https://github.com/bgokden/place-extractor-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/bgokden/place-extractor-mcp/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![MCP](https://img.shields.io/badge/MCP-server-8A2BE2)
+
 An [MCP](https://modelcontextprotocol.io) server that gives any MCP client
 (Claude Desktop, Claude Code, Cursor, …) a **multilingual place-extraction**
 tool: pull cities, countries, regions, and landmarks out of text in **13
