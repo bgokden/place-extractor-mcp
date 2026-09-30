@@ -24,7 +24,7 @@ jobs:
       # Smoke tests exercise the MCP wiring (server, tools, output shape) and do
       # NOT download the model, so we install only the lightweight deps here.
       - name: Install test dependencies
-        run: python -m pip install --upgrade pip mcp pytest
+        run: python -m pip install --upgrade pip "mcp>=1.2.0,<2" pytest
 
       - name: Run smoke tests
         run: pytest -q
